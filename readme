@@ -1,0 +1,44 @@
+# Token Airdrop Script
+
+This Python script automates the process of sending token airdrops to a list of Solana wallet addresses. It reads wallet addresses and corresponding token amounts from a text file, performs the token transfers, and logs the transactions.
+
+## Requirements
+
+- Python 3.x
+- Solana CLI (`spl-token` command)
+- [Add any other requirements if applicable]
+
+## Usage
+1. Ensure you have Python and the Solana CLI installed.
+
+## Choose between Single Value Whitelist style airdrop or different amounts airdrop
+For Whitelist style use whitelist_airdrop.py and edit Whitelist_airdrop.txt
+For Different amounts airdrop use airdrop_amount.py and edit airdrop_amount_list
+*Make sure to change the token address*
+
+2. Edit the text file (`airdrop_amount_list.txt`) with a list of wallet addresses and token amounts in the format `wallet_address, amount`.
+3. Run the script:
+
+    ```bash
+    python airdrop_amount.py
+    ```
+
+4. The script will read the input file, perform token transfers, and log the transactions.
+5. View the transaction log in the `output_log.txt` file.
+
+
+## Configuration
+- Modify the token address.
+- Modify the script as needed, especially the Solana CLI command parameters.
+- Adjust the cooldown period (`time.sleep(15)`) if necessary. 
+
+## Notes
+
+- Ensure sufficient funds are available in the funding wallet (`H6Jz41jUjNV7kNDBQuvJqNnpEYhGF6wJ5DR8bMLZDqvR`) .
+- This script captures local command execution status; additional checks for blockchain confirmation are recommended.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Made by Palm Island & Buddie.sol
